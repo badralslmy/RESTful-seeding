@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: seedr-proxy-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn server:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: SEEDR_EMAIL
+        sync: false
+      - key: SEEDR_PASS
+        sync: false
