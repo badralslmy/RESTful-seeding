@@ -3,3 +3,4 @@ uvicorn
 seedrcc
 python-dotenv
 requests
+python-multipart
